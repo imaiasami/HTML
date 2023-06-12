@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>시맨틱 태그로 레이아웃 생성</title>
+    <style>
+        .container {
+            width: 1200px;
+            border: 1px solid red;
+            margin: auto;
+        }
+        /* 인라인 요소에서 중앙 정렬을 text-align */
+        /* 블록 요소에서 중앙 정렬은 margin : auto */
+
+        header {
+            background-color: skyblue;
+            overflow: hidden;
+        }
+
+        header article {
+            background-color: grey;
+            width: 300px;
+            height: 100px;
+
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .navi {
+            float: right;
+        }
+
+        .box1 {
+            background-color: yellow;
+            height: 300px;
+
+        }
+
+        .box2 {
+            background-color: green;
+            overflow: hidden;
+        }
+
+        .box2 article {
+            width: 33.33333333333333333333333333333333333333333333333333333%;
+            height: 200px;
+            float: left;
+        }
+
+        .sub1 {
+            background-color: darkblue;
+        }
+
+        .sub2 {
+            background-color: lightblue;
+        }
+
+        .sub3 {
+            background-color: burlywood;
+        }
+
+        footer {
+            background-color: aqua;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <article class="logo">logo</article>
+            <article class="navi">navi</article>
+        </header>
+        <section class="box1">box1</section>
+        <section class="box2">
+            <article class="sub1">sub1</article>
+            <article class="sub2">sub2</article>
+            <article class="sub3">sub3</article>
+        </section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

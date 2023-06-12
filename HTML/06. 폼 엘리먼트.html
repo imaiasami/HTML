@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>폼 엘리먼트</title>
+</head>
+<body>
+    <!-- input 태그는 항상 form 태그 안에 감싸져야 한다 ! -->
+     <!-- fieldset은 테두리를 만든다. -->
+        <!-- legend 는 테두리에 이름을 붙인다.-->
+        <!-- hidden 태그는 숨겨져 있는 태그이다. 소스보기에서는 보인다.
+            submit 했을 시 도메인에는 보인다.-->
+    <form action="">
+        <fieldset>
+            <legend>개인정보</legend>
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname"><br>
+            <label for="pwd">Password</label>
+            <input type="password" name="pwd" id="pwd"><br>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" id="birthday"><br>
+            <label for="birthdaytime">Birthday (date and time) </label>
+            <input type="datetime-local" name="birthdaytime" id="birthdaytime"><br>
+            <label for="email">Enter your email</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="myfile">Select a file</label>
+            <input type="file" name="myfile" id="myfile" multiple><br>
+            <input type="hidden" name="guest" value="1234">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" min="1" max="5"><br>
+            <label for="vol">Volume</label>
+            <input type="range" name="vol" id="vol"><br>
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search"><br>
+
+        </fieldset>
+        <p></p>
+            <label for="fruits">Choose a fruit</label>
+            <select name="fruits" id="fruits" size="2" multiple>
+                <option value="apple">사과</option>
+                <option value="banana">바나나</option>
+                <option value="grape" selected>포도</option>
+                <option value="mango">망고</option>
+            </select>
+            <br>
+
+            <textarea name="message" cols="50" rows="20">기본 입력된 텍스트</textarea><br>
+
+            <button type="button" onclick="alert('HelloWorld')">클릭하세요.</button>
+            <!-- button 태그는 기능은 없다. 기능을 주려면 속성값을 주면된다.-->
+
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+    </form>
+  
+</body>
+</html>

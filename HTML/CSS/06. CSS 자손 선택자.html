@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 자손 선택자</title>
+    <style>
+        .box {
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+        }
+        /* 자식 선택자만 */
+        .box > div {
+            border: 1px solid blue;
+            width: 200px;
+            height: 200px;
+        }
+        /* 자식 선택자의 자손 */
+        .box > div div {
+            border: 1px solid green;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* span {
+            border: 1px solid blue;
+           
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+            <div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+    </div>
+    <!-- <span>span 태그 </span> -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 셀 합치기</title>
+    <style>
+        table, td, th {
+            border: 3px solid #000000;
+            border-collapse: collapse;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <table style="width: 50%">
+        <caption>PhoneBook</caption>
+        <tr>
+            <th>first Name</th>
+            <th>last name</th>
+            <th>Age </th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Jill</td>
+            <td rowspan="2">Smith</td>
+            <td rowspan="2">50</td>
+            <td>010-1111-2222</td>
+        </tr>
+        <tr>
+            <td>010-1111-3333</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+            <td>010-1111-4444</td>
+        </tr>
+    </table>
+
+</body>
+</html>

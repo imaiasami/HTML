@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> HTML BOM </title>
+    <script>
+        /*
+
+            BOM : Browser Object Model
+            1. Window
+            2. Location
+            3. Alert (Alert, confirm, prompt)
+            4. History
+            5. Navigator
+            6. Timing
+            7. Cookie
+
+        */
+
+        function closeWindow() {
+            window.close();     // 현재 창을 닫는 함수
+        }
+
+        function openWindow() {
+            window.open('https://www.naver.com');       
+            // 새 창을 여는 함수, 브라우저에 따라 새탭으로 열릴 수도 있고,
+            // 새 창으로 열릴수도 있다.
+        }
+
+        function locationHref() {
+            window.location.href = 'https://www.google.com';
+        }
+
+        function goForward() {
+            window.history.forward();
+        }
+
+        function goBackward() {
+            window.history.back();
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <h2>Javascript Window</h2>
+
+    <p id="demo"></p>
+    <input type="button" onclick="closeWindow()" value="창 닫기">
+    <br>
+    <input type="button" onclick="openWindow()" value="창 열기">
+    <br>
+    <input type="button" onclick="locationHref()" value="주소 이동">
+    <br>
+    <input type="button" onclick="alertWindow()" value="Alert">
+    <br>
+    <input type="button" onclick="confirmWindow()" value="Confirm">
+    <br>
+    <input type="button" onclick="goForward()" value="Forward">
+    <br>
+    <input type="button" onclick="goBackward()" value="Backward">
+
+    <script>
+
+        // Alert
+        function alertWindow() {
+            alert('Alert');
+        }
+
+        // Confirm                              
+        // Confirm 을 하면 사용자가 선택할 수 있다.
+        // return value 가 있다는 말이다. return value 를 줄 수 있다.
+        function confirmWindow() {
+            console.log(confirm('Confirm'));        // Confirm : True, Cancel : False
+        }
+
+        // Window
+        document.getElementById("demo").innerHTML = 
+        "Browser inner Window width: " + window.innerWidth +
+        "px<br>" +
+        "Browser inner Window height: " + window.innerHeight + "px";
+
+        // Location
+        document.getElementById("demo").innerHTML =
+        "Page Location is " + window.location.href;            // 주소가 출력
+
+        document.getElementById("demo").innerHTML = 
+        "Page hostname is " + window.location.hostname;        // 도메인이 출력
+
+        document.getElementById("demo").innerHTML = 
+        "Page pathname is " + window.location.pathname;        // 경로를 출력
+
+        document.getElementById("demo").innerHTML = 
+        "Page protocol is " + window.location.protocol;        // 프로토콜을 출력
+
+        document.getElementById("demo").innerHTML = 
+        "Page port is " + window.location.port;                // 포트를 출력
+
+    </script>
+
+</body>
+</html>

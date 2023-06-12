@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> HTML 과목평가_유동환 </title>
+    <script>
+
+        function checkForm() {
+            if (getName() && getId() && getPassword() && passwordCheck() 
+            && getPostalCode() && checkPhone(str) && event_click()) {
+                return true;
+            }
+            return false;
+
+        }
+
+        function getName() {
+            let name = document.getElementById("name").value;
+
+            if (name.length < 1) {
+                alert('이름을 입력해 주세요');
+                return false;
+            }
+            console.log('substring :' + name.substring(2, 4));
+            return true;
+        }
+
+        function getId() {
+            let id = document.getElementById("id").value;
+
+            if (id.length < 2) {
+                alert('아이디를 입력해 주세요');
+                return false;
+            }
+            console.log('substring :' + id.substring(3, 12));
+            return true;
+        }
+
+        function getPassword() {
+            let password = document.getElementById("password").value;
+
+            if (password.length < 4) {
+                alert('비밀번호를 입력해 주세요');
+                return false;
+            }
+            console.log('substring :' + password.substring(5, 8));
+            return true;
+        }
+
+        function passwordCheck() {
+          if(document.getElementById("password").value) {
+            return true;
+          }
+          return false;
+        }
+
+        function getPostalCode() {
+            let password = document.getElementById("postalCode").value;
+
+                if (postalCode.length < 4) {
+                    alert('숫자만 입력해 주세요');
+                    return false;
+                }
+                console.log('substring :' + postalCode.substring(5, 8));
+                return true;
+        }
+
+        function checkPhone(str) {
+            let phone = document.getElementsByName("phone");
+
+                for (let i = 0; i < phone.length; i++) {
+                    if (phone[i].value == str) {
+                        phone[i].checked = true;
+                    }
+                    alert('통신사를 선택해주세요.');
+                    return false;
+                }
+        }
+
+        function event_click() {
+            if(document.getElementById("id").value==''){
+                alert("아이디를 입력해주십시오.");
+                return false;
+            }
+            if(document.getElementById("name").value==''){
+                alert("이름을 입력해주십시오.");
+                return false;
+            }
+            if(document.getElementById("password").value==''){
+                alert("비밀번호를 입력해주십시오.");
+                return false;
+            }
+            
+            if(document.getElementById("email").value==''){
+                alert("이메일을 입력해주십시오.");
+                return false;
+            }
+            
+            if(document.getElementById("phone").value==''){
+                alert("전화번호를 입력해주십시오.");
+                return false;
+            } 
+            return true;
+
+            }
+
+    </script>
+    <style>
+        caption {
+            text-align: right;
+        }
+        span {
+            color: red;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: left;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+    <form action="#" method="get" onsubmit="return checkForm()">
+        <caption><span>(*)</span>부분은 필수 입력 사항입니다.</caption>
+            <tr>
+                <td><label for="id">아이디(ID)</label><span>(*)</span></td>
+                <td><input type="text" name="id" id="id">
+                   <input type="button" value="중복확인">
+                   <sub class="id">3~12자리 영문, 숫자 조합(대소문자 구분 없으며 특수기호는 사용불가)</sub>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="name">이름</label><span>(*)</span></td>
+                <td><input type="name" name="name" id="name"><br></td>
+            </tr>
+                <td><label for="password">비밀번호</label><span>(*)</span></td>
+                <td><input type="text" name="password" id="password">
+                    <sub class="password">5~8자리 문자와 숫자를 이용하여 만들 수 있습니다</sub>
+                </td>
+                <br>
+            <tr>
+                <td>
+                    <label for="passwordCheck">비밀번호 확인</label><span>(*)</span>
+                </td>
+                <td>
+                    <input type="text" name="passwordCheck" id="passwordCheck">
+                   <sub class="passwordCheck">영문은 대소문자를 구분합니다</sub>
+                </td>  
+            </tr>
+                <br>
+            <tr>
+                <td><label for="email">이메일</label><span>(*)</span></td>
+                <td>
+                    <input type="email" name="email" id="email">
+                    <sub>-</sub>
+                    <input type="email" name="email" id="email">
+                        <select name="email" id="email">
+                            <option value="input" selected>선택하세요</option>
+                            <option value="google">google.com</option>
+                            <option value="naver">naver.com</option>
+                            <option value="daum">daum.net</option>
+                            <option value="typing">직접 입력</option>
+                        </select>
+                </td>
+            </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="address">주소</label>
+
+                    </td>
+                    <td>
+                        <input type="postalCode" name="postalCode" id="postalCode">
+                        <sub>-</sub>
+                        <input type="postalCode" name="postalCode" id="postalCode">
+                        <input type="button" value="우편번호 검색">
+                        <br>
+                        <input type="text" name="address" id="address">
+                        <sub>나머지 주소</sub>
+                        <input type="text" name="address" id="address">
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="phone">휴대폰 번호</label><span>(*)</span>
+                    </td>
+                    <td>
+                        <select name="phone" id="phone">
+                            <option value="input" selected>선택</option>
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="017">017</option>
+                            <option value="019">019</option>
+                        </select>
+                    <input type="text" name="phone" id="phone">
+                    <sub>-</sub>
+                    <input type="text" name="phone" id="phone">
+                   
+                    <input type="radio" onclick="checkPhone('SK')" name="phone" id="SK" value="SK">
+                    <label for="SK">SK</label>
+                    <input type="radio" onclick="checkPhone('KT')" name="phone" id="KT" value="KT">
+                    <label for="KT">KT</label>
+                    <input type="radio" onclick="checkPhone('LG')" name="phone" id="LG" value="LG">
+                    <label for="LG">LG</label>
+                    </td>
+
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="agree">광고 수신동의</label>
+                    </td>
+                    <td>
+                        <label for="mail">광고 메일을 수신합니다</label>
+                        <input type="checkbox" name="agree" id="mail">
+                        <label for="sms">광고 SMS를 수신합니다</label>
+                        <input type="checkbox" name="agree" id="sms" checked>
+                    </td>
+                </tr>
+        </form>
+    </table>
+            <input type="submit" id="register" value="가입">
+            <input type="submit" id="return" value="다시입력">
+
+</body>
+</html>

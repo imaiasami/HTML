@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크, 이미지</title>
+</head>
+<body>
+
+
+    <!-- <a> : html 내에 링크를 생성하는 태그 -->
+    <!-- href 속성 : 링크로 이동할 url을 지정 -->
+    <!-- https : Hyper Text Transfer Protocol secure -->
+    <!-- <br> 한 줄 띄우기 -->
+    <!-- a태그의 속성중에 target 속성 : 링크가 이동할 위치를 지정 -->
+    <!-- target의 속성값으로 _self(기본방식), _blank, _parent, _top -->
+
+
+    <a href="https://naver.com" target="_blank">
+        <img src="./img/Naver.png" width="200px" alt="네이버">
+        네이버
+    </a><br>
+    <a href="https://daum.net" target="_parent">
+        <img src="./img/daum.png" width="200px" alt="다음">
+        다음
+    </a><br>
+    <a href="https://google.com" target="_top">
+        <img src="./img/google.png" width="200px" alt="구글">
+        구글
+    </a><br>
+    <a href="03. 테이블.html">테이블</a><br>
+
+
+    <!-- img 태그는 html 내에 이미지를 불러오는 태그 -->
+    <!-- src속성 : 불러올 이미지의 경로를 지정 -->
+    <!-- 절대경로 : ROOt(최상위 경로)를 기준으로 경로를 설정 -->
+    <!-- 상대경로 : 현재 위치를 기준으로 경로를 설정 -->
+
+
+    <img src="./img/daum.png" width="200px" alt=""><br>
+    <img src="./img/Naver.png" width="200px" alt=""><br>
+    <img src="./img/google.png" width="200px" alt=""><br>
+    <img src="./img/pikacyu.png" width="200px" alt=""><br>
+    <img src="./img/gif.gif" width="200px" alt=""><br>
+
+
+    <!-- <iframe> : 외부의 html 문서를 가져올 때 사용하는 태그 -->
+    <!-- 임베디드 항목 중에 <video>, <audio>, <img>, <picture>,.... -->
+    <!-- autoplay는 자동재생,  -->
+
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/_LPfZvxkL2Q" 
+        title="그림 하나에 보험료만 40조!?👀 살면서 꼭 봐야 할 예술 작품들과 문화재 반환을 둘러싼 각국의 대립 / 별다리 연구소" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+        
+
+</body>
+</html>

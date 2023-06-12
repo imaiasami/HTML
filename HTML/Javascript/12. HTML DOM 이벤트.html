@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HTML DOM 이벤트</title>
+    <script>
+        /*
+            HYML 이벤트 예시
+            - 마우스 클릭
+            - 웹 페이지 로딩
+            - 이미지 로딩
+            - 인풋 필드 변경
+            - 폼 서브밋
+            - 키 스트록
+
+        */
+       function upperCase(){
+            console.log('upperCase 실행');
+            let name =  document.getElementById('fname');
+            name.value = name.value.toUpperCase();
+       }
+       function btnClick(){
+        console.log('btnClick 실행');
+       }
+       function changeC() {
+        console.log('changeC 실행');
+        document.getElementById('m').style.color = 'red';
+       }
+       function changeB(){
+        console.log('changeB 실행');
+        document.getElementById('m').style.color = 'blue';
+       }
+       function focusOn(){
+        console.log('focusOn 실행');
+       }
+    </script>
+</head>
+<body>
+    <label for="fname"> 이름 입력 :</label>
+    <input type="text" name="fname" id="fname" onkeydown="upperCase()" onfocus="focusOn()" onfocusout = "">
+    <input type="button" value="클릭하세요" onclick="btnClick()">
+    <div id="m" onmouseover="changeC()" onmouseout="changeB()"> 마우스를 올리세요</div>
+</body>
+</html>

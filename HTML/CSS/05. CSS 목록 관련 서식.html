@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 목록 관련 서식</title>
+    <style>
+        .menu {
+            /* list-style: none;   리스트 앞에 점이 사라짐 
+            list-style: disc;
+            list-style: circle; */
+            /* list-style: square; */
+            list-style: decimal;
+        }
+        /* 
+            ::before
+            ::after
+        */
+
+        .menu li::before {
+            content: '😊';
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <ul class="menu">   
+        <li> menu - 1</li>
+        <li> menu - 2</li>
+        <li> menu - 3</li>
+        <li> menu - 4</li>
+        <li> menu - 5</li>
+    </ul>
+    
+</body>
+</html>

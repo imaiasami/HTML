@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>CSS 선택자</title>
+    <style>
+        /*태그 선택자 : 가장 많이 쓰임 */
+            /* p {
+                text-align: center;
+                color: red;
+            } */
+
+        /* 아이디 선택자 : 가장 많이 쓰임 */
+        /* #center {
+            text-align: left;
+            color: green;
+        } */
+
+        /* 클래스 선택자 */
+        /* .center.id {
+            text-align: right;
+            color: blue;
+        }
+        p.center {
+            text-align: center;
+            color: coral;
+        } */
+
+        /*  그룹 선택자 */
+        p,  h1 {
+            color: red;
+            text-align: center;
+        }
+        /* p, h1 태그를 두 개 선택하라 */
+        /*   자손(자식, 손자 포함) 선택자 */
+        p b {
+            color: blue;
+        }
+        /* p b : p 태그 안에 b를 선택해라 */
+
+        /*  전체 선택자 : 태그 종류에 상관없이 모두를 선택해라 */
+        * {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <p>패, 나는 이름과, 불러 마리아 이 때 버리었습니다. <b>아이들의 라이너 오면</b> 이웃 이름자 무성할 거외다.</p>
+
+    <p id="center">노새, 너무나 하나 불러 무성할 북간도에 까닭입니다. 패, 비둘기, 경, 계십니다.</p>
+
+    <p class="center">묻힌 차 그리고 거외다. 경, 않은 보고, 나의 어머니, 있습니다. 별 언덕 추억과 하나에 내 겨울이 별을 까닭입니다. 노루, 내 우는 까닭입니다.</p>
+
+    <div class="center">잔디가 마디씩 아이들의 하나의 옥 이름을 봄이 까닭입니다. 이름과, 딴은 별을 거외다.</div>
+
+    <h1>든 보는 대한 트고, 청춘을 칼이다. 열매를 어디 같지 따뜻한 그러므로 아니다.</h1>
+
+    <p>새겨지는 했던 어머니, 다하지 아침이 토끼, 이런 밤을 까닭입니다. 너무나 그리고 하나 위에도 이름을 흙으로 헤는 추억과 듯합니다. 벌레는 노루, 이네들은 불러 불러 봅니다.</p>
+    
+</body>
+</html>

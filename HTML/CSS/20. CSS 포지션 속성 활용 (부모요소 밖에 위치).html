@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 포지션 속성 활용 (부모 요소 밖에 위치)</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 300px;
+            border: 5px solid red;
+            position: relative;
+        }
+
+        .parent div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .child1 {
+            top: 100%;
+
+        }
+
+        .child2 {
+            left: 100%;
+        }
+
+        .child3 {
+            top: 100%;
+            left: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+    </div>
+</body>
+</html>

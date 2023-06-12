@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 적용 우선순위</title>
+    <!--
+
+        CSS 적용 우선순위
+        1. ! important
+        2. 인라인
+        3. 아이디 선택자 (#)
+        4. 클래스 선택자 (.)
+        5. 태그 선택자 (순서는 상관없다.)
+    
+    -->
+    <style>
+        h1 {
+            color: red !important;
+        }
+
+        .text {
+            color: blue;
+        }
+
+        #text {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS 적용 우선순위 - 태그</h1>
+    <h1 class="text">CSS 적용 우선순위 - 클래스</h1>
+    <h1 id="text" class="text">CSS 적용 우선순위 - 아이디</h1>
+    <h1 style="color: rgb(40, 155, 30); font-size: 20px;">CSS 적용 우선순위 - 인라인</h1>
+    <h1>CSS 적용 우선순위 - !important</h1>
+    
+</body>
+</html>

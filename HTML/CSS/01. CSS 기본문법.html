@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <!--
+        CSS (Cascading Style Sheet) : HTML 문서 내에 태그를 선택해서 디자인하고 배치하는 역할
+        CSS 적용
+            - 내부에 작성
+            - 외부에서 작성하여 링크
+            - 선택자에 어떤 태그를 선택하느냐를 결정한다. 보통은 id 값을 선택한다.
+            id 값은 고유의 값이기 때문이다.
+    -->
+ <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* 주석 작성 */
+        /*
+            선택자 {
+                속성 : 값
+            }
+            body 태그도 선택할 수 있으며, body 태그를 선택하면 그 자식 태그들도 다 적용되며,
+            상속된다고 볼 수 있다.
+        */
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        
+        h1 {
+            display: block;
+            color: rgb(50, 179, 84);
+            font-size: 50px;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+    </style>
+ </head>
+<body>
+    <h1> CSS 기초 문법</h1>
+    <h2> CSS 기초 문법</h2>
+
+</body>
+</html>

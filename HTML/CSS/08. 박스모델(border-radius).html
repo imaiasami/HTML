@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>박스모델(border-radius)</title>
+    <style>
+        /* 
+            border-radius : 테두리를 둥글게 처리
+            border-radius 를 각 모서리마다 다르게 값을 줄 수 있다.
+        */
+        div {
+            border: 1px solid black;
+            height: 200px;
+            width: 200px;
+        }
+        .box1 {
+    
+            border-radius: 20px;
+        }
+
+        .box2 {
+
+            border-radius: 50%;
+        }
+
+        .box3 {
+            border-radius: 50px 0px 50px 0px;       /* 왼쪽 위부터 시계 방향 */
+
+        }
+        .box4 {
+            border-radius: 10px 30px;
+             /* 두개만 넣으면 첫 값은 왼쪽 위와 오른쪽 아래 적용,
+             두 번째 값은 오른쪽 위와 왼쪽 아래에 적용된다. */
+        }
+        .box5 {
+            border-radius: 100px 100px 0px 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+</body>
+</html>

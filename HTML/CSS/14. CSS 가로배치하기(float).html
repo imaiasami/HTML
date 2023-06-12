@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 가로배치하기</title>
+    <style>
+        .parent {
+            border: 1px solid red;
+            width: 600px;
+            /* height: 200px; */
+            /* overflow : hidden : 자식 요소의 높이에 따라 부모의 높이도 맞춰준다. */
+            overflow: hidden;
+            text-align: center;    /* 인라인 요소를 가운데로 배치한다. */
+            
+        }
+        /* child 는 여기서 원래 인라인 요소이다. 콘텐츠가 없으면 크기가 없다. */
+        .child {
+            border: 1px solid blue;
+            width: 200px;
+            height: 200px;
+            /* display : 속성을 블록 요소로 변경 */
+            display: block;
+            /* float : 요소를 띄어서 배치한다. 부모에게서 빠져나간다. (주먹과 보자기?)*/
+            float:left;
+            /* margin : auto 속성은 블록 요소를 가운데로 옮길 수 있다 !!! */
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <span class="child"></span>
+    </div> 
+</body>
+</html>

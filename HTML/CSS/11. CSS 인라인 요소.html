@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>인라인 요소</title>
+    <style>
+        /* 
+            !! 인라인 요소 !! :
+
+                - 한 줄에 여러개의 엘리먼트를 배치
+                - 기본 너비값이 콘텐츠의 너비와 같다.
+                - 크기값을 가질 수 없다. (중요) !!!
+                - 상하 마진 값은 가질 수 없다. !!!
+            
+                ex) span, a, small, big, u, s, br, q, b, strong, ...
+
+            블럭 요소 :
+
+                - 한 줄에 한개의 엘리먼트를 배치
+                - 기본 너비값이 100% 이다.
+                - 크기값을 가질 수 있다. (중요)
+                - 상하좌우 관계없이 마진값을 가질 수 있다.
+
+                ex) div, table, h1~h6, caption, header, section, article, p, ul, ol, td, th, hr, ...
+
+            인라인 블럭 요소 :
+
+                - 한 줄에 여러개의 엘리먼트를 배치
+                - 기본 너비값은 콘텐츠의 너비값과 같다.
+                - 크기값을 가질 수 있다.
+                - 마진값도 상하좌우 상관없이 가질 수 있다.
+
+                ex) img, input, button, ...
+
+            CSS 를 통해서 각 요소의 속성을 바꿀 수 있다.
+            (블럭 > 인라인, 인라인 > 블록, 인라인 블록 > 인라인, 인라인 > 인라인 블록, 블록 > 인라인 블록)
+
+        */
+        span {
+            border: 1px solid black;
+            width: 300px;
+            height: 500px;
+            padding: 20px;
+            margin: 100px;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            border: 1px solid red;
+            /* 크기값을 가질 수 없다. */
+            width: 200px;
+            height: 200px;
+            margin: 10px;       /* 상하 x 좌우 o */
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://www.google.co.kr/">구글</a>
+    <a href="https://new.www.naver.com/">네이버</a>
+    <a href="https://www.daum.net/">다음</a>
+</body>
+</html>

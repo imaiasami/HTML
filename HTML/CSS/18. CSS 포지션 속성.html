@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>포지션 속성</title>
+    <style>
+        /* 
+            부모요소 position : relative
+            자식요소 position : absolute
+        
+        */
+        .parent {
+            background-color: blue;
+            width: 600px;
+            height: 300px;
+            position: relative;
+        }
+        .child {
+            background-color: red;
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    
+</body>
+</html>

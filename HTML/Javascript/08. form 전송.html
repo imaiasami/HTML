@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title> form 전송</title>
+    <!-- 
+        form 데이터 전송 방식 : get, post
+    -->
+    <script>
+
+        function checkForm() {
+            let result1 = getName();
+            let result2 = getPhone();
+            checkFruit();
+
+            if (result1 && result2) {
+                return true;
+            } 
+            return false;
+        }
+
+        function checkHobby() {
+            let hobby = document.getElementsByName("hobby");
+            for (let i = 0; i < hobby.length; i++) {
+                console.log(hobby[i].checked);
+                if (hobby[i].checked == true) {
+                    alert(hobby[i].value);
+                }
+            }
+            console.log(hobby);
+        }
+
+        function checkRadio(str) {
+            let hobby = document.getElementsByName("hobby");
+
+            for (let i = 0; i < hobby.length; i++) {
+                if (hobby[i].value == str) {
+                    hobby[i].checked = true;
+                }
+            }
+        }
+
+        function checkFruit() {
+            let fruit = document.getElementsByName("fruit");
+
+            // 체크한 목록 출력
+            for (let i = 0; i < fruit.length; i++) {
+                if (fruit[i].checked == true) {
+                    alert(fruit[i].value);
+                }
+            }
+            // 체크한 걸 모두 해제
+            for (let i = 0; i < fruit.length; i++) {
+                fruit[i].checked = false;
+            }
+        }
+
+        function openSite() {
+            let site = document.getElementById("site");
+
+            for(let i = 0; i < site.length; i ++){
+                if(site.options[i].selected == true){
+                    alert(site.options[i].text + ' 사이트로 이동합니다.');
+                    window.open(site.options[i].value);
+                }
+            }
+        }
+
+        function getName() {
+            // alert('getName 함수 실행');
+            let name = document.getElementById("name").value;
+            console.log(name);
+            console.log(typeof name);
+            console.log('length : ' + name.length);
+
+            if (name.length < 1) {
+                alert('이름을 입력해 주세요');
+                return false;
+            }
+            console.log('substring :' + name.substring(0, 1));
+            return true;
+        }
+
+        function getPhone() {
+            // 사용자가 입력한 전화번호를 검증한다.
+            let phone = document.getElementById("phone").value;
+            console.log(콜);
+
+            // 1. 전화번호의 길이가 13자리 인지
+            if (phone.length == 13) {
+                console.log('길이가 맞습니다.');
+            } else {
+                console.log('길이가 다릅니다.');
+            }
+
+            // 2. 전화번호가 '-' 값을  포함하고 있는지
+            if (phone.charAt(3) == '-' && phone.charAt(8) == '-') {
+                console.log('- 문자를 포함하고 있습니다.');
+            } else {
+                console.log('- 문자가 없거나 위치가 다릅니다.');
+            }
+            console.log(phone.indexOf('-'));
+            console.log(phone.lastIndexOf('-'));
+
+            // 3. '-' 문자를 기준으로 3부분으로 잘라서 출력 
+            let afterSplit = phone.split('-');
+            console.log(afterSplit[0])
+            console.log(afterSplit[1])
+            console.log(afterSplit[2])
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!-- form의 method 기본값 : get 방식 -->
+    
+    <form action="#" method="get" onsubmit="return checkForm()">
+        <label for="name">이름 : </label>
+        <input type="text" name="name" id="name"><br>
+        <label for="phone">전화번호 : </label>
+        <input type="text" name="phone" id="phone" placeholder="010-0000-0000"><br>
+
+        <label for="baseball">야구</label>
+        <input type="radio" name="hobby" id="baseball" value="baseball">
+        <label for="football">축구</label>
+        <input type="radio" name="hobby" id="football" value="football">
+        <label for="swimming">수영</label>
+        <input type="radio" name="hobby" id="swimming" value="swimming"><br>
+
+        <input type="button" onclick="checkRadio('baseball')" value="야구" id="baseball">
+        <input type="button" onclick="checkRadio('football')" value="축구" id="football">
+        <input type="button" onclick="checkRadio('swimming')" value="수영" id="swimming"><br>
+
+        <label for="apple">사과</label>
+        <input type="checkbox" name="fruit" id="apple" value="apple">
+        <label for="banana">바나나</label>
+        <input type="checkbox" name="fruit" id="banana" value="banana">
+        <label for="peach">복숭아</label>
+        <input type="checkbox" name="fruit" id="peach" value="peach"><br>
+
+        <select name="site" id="site" onchange="openSite()">
+            <option value="">--- 선택하세요 ---</option>
+            <option value="https://www.naver.com" >네이버</option>
+            <option value="https://www.daum.net">다음</option>
+            <option value="https://www.cyworld.com">싸이월드</option>
+        </select><br>
+
+        <input type="submit" value="전송하기">
+    </form>
+</body>
+
+</html>

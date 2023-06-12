@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>함수</title>
+    <script>
+        
+        /*
+            Function
+            1. 함수의 문법
+             - 명명규칙 : 영문자, _, $, 사용가능, 숫자와 특수문자는 사용 불가
+             - 명명관례 : 동사로 시작, 두 개 이상의 단어는 카멜케이스
+             - function 함수이름(argument1, argument2, argument3, ...) {
+                코드
+            }
+            
+            2. 리턴
+             - return 을 만나면 함수의 실행을 중지하고 호출한 곳으로 리턴 값을 돌려준다.
+             - return 을 작성하지 않으면 undifined 를 반환한다.
+             - 아무것도 적지않은 것과, return; 만 적은 것은 동일하다. undifined 를 준다.
+        */
+
+        // -----------------------------------------------
+
+        function addFunction(a, b) {
+            return a + b;
+        }
+
+        let result = addFunction(1, 4);
+        console.log(result);
+
+        // ------------------------------------------------
+
+        let myFunction = function (a, b) {return a + b};
+        let result2 = myFunction(1, 4);
+        console.log(result2);
+
+        // -------------------------------------------------
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>연산자</title>
+    <script>
+        /*
+            1. 산술 연산자
+            +, -, *, /, **, ++, --
+
+            2. 대입 연산자
+            =, +=, -=, *=, /=, %=, **=
+
+            3. 비교 연산자
+            >, <, >=, <=, ==, !=, ===, !==
+
+            4. 논리 연산자
+            &&, ||, !
+
+            5. 타입 연산자
+            typeof, instanceof
+
+            6. 비트 연산자
+            &, |, ~, ^, <<, >>, <<<, >>>
+            (XOR 연산)
+            X   Y   OUT
+            0   0   0
+            1   0   1
+            0   1   1
+            1   1   0
+
+            (AND 연산)
+            X   Y   OUT
+            0   0   0
+            1   0   0
+            0   1   0
+            1   1   1
+
+            (OR 연산)
+            X   Y   OUT
+            0   0   1
+            1   0   0
+            0   1   0
+            1   1   1
+        */
+       console.log(3**2);   // var 는 같은 변수명을 여러개 쓸 수 있다.
+
+    //    let y = 30;          // let 은 같은 변수명을 여러개 쓸 수 없다.
+    //    let y = 40;       // const 는 한 번 할당하면, 바꿀 수 없다.
+        // const y = 30;
+    //    console.log(y);
+
+       /*
+            let : 값을 재할당할 필요가 있을 때 사용
+            const : 재할당이 필요없는 상수일 경우 사용
+       */
+      let text1 = '홍';
+      let text2 = '길동';
+      let text3 = text1 + ' ' + text2;
+      console.log(text3);
+
+      // 문자열과 숫자 연산
+      let x = 5 + 5;
+      let y = '5' + 5;
+      let z = 'Hello' + 5;
+      console.log(x);
+      console.log(y);
+      console.log(typeof y);
+      console.log(z);
+
+      // 비교 연산자
+      let num1 = 50;
+      let num2 = '50';
+      let num3 = 30;
+      let num4 = '40';
+      console.log(num1 == num2);
+      // 자바스크립트에서 == 은 값만 비교한다. 타입은 보지 않는다. (단순 비교)
+      console.log(num1 === num2);
+      // 자바스크립트에서 === 은 값도 비교하고, 타입도 비교한다. (엄격 비교)
+      console.log(num3 !== num4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

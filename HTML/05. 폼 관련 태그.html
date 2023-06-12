@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>폼 관련 태그</title>
+</head>
+<body>
+    <!--
+        <form>....</form> 태그의 속성
+
+        method : 사용자가 입력한 내용을 서버에 전송하는 방식을 지정하는 것.
+            get : 주소 표시줄에 사용자가 입력한 내용이 그대로 노출된다.
+                    최대 4096byte 까지의 데이터만 보낼 수 있다.
+            post : 입력 내용의 길이 제한이 없다. 사용자가 입력한 내용이 노출되지 않는다.
+                    민감한 정보들은 get 방식으로 보내면 안되고, post 방식으로 보내야 한다.
+        name : 폼의 이름을 지정
+        action : <form> 태그 안의 내용을 전송할 서버의 주소
+        target : <action> 태그 내에서 지정한 스크립트 파일을 현재 창이 아닌
+                다른 위치에서 열도록 지정
+
+    -->
+</body>
+    <form action="" method="post">
+        <label for="id"> 아이디 : </label>
+        <input type="text" name="user_id" id="id" class="id"
+        value="hong">
+        <br>
+        <!-- 중요한 것은 name 이다. name 값을 가져간다. -->
+
+        <label for="password"> 비밀번호 : </label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <!-- name은 서버에서 읽기 위해 있는 것이다. -->
+        <!-- 어떤 값을 미리 보여주고 싶을 때, value를 쓴다. -->
+        <!-- <label> 태그를 사용하면 focus를 조절할 수 있다. -->
+        
+        <label for="HTML">HTML</label>
+        <input type="radio" name="fav_language" id="HTML">
+        <label for="CSS">CSS</label>
+        <input type="radio" name="fav_language" id="CSS" checked>
+        <label for="JavaScript">JavaScript</label>
+        <input type="radio" name="fav_language" id="JavaScript">
+        <!-- 라디오 버튼은 name 값이 일치해야 한다.-->
+        <!-- 미리 체크를 해놓고 시작하고 싶으면, checked 를 넣는다. -->
+        <!-- 둘 이상을 넣으면 마지막 것만 선 체크된다. -->
+
+        <br><br>
+        <label for="bike">bike</label>
+        <input type="checkbox" name="vehicle" id="bike">
+        <label for="car">car</label>
+        <input type="checkbox" name="vehicle" id="car">
+        <label for="boat">boat</label>
+        <input type="checkbox" name="vehicle" id="boat">
+        <!-- 체크 박스는 name 값이 같아도 된다. id 값이 달라야 한다. radio 버튼과 반대다.-->
+
+
+        <br><br>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="취소하기">
+
+    </form>
+</html>

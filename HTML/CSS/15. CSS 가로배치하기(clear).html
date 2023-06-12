@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>CSS 가로배치하기(clear)</title>
+    <style>
+        /*
+            clear :  float 속성이 적용되면 다음 요소가 자동으로 float 속성을 받고,
+            이것을 해제시키다.
+
+        */
+        .parent {
+            border: 5px solid red;
+            width: 600px;
+        }
+        .top {
+            background-color: purple;
+            height: 50px;
+        }
+        .left {
+            background-color: skyblue;
+            width: 300px;
+            float: left;
+            height: 100px;
+        }
+        .right {
+            background-color: orange;
+            width: 300px;
+            float: right;
+            height: 100px;
+        }
+        .clear {
+            background-color: green;
+            height: 50px;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="top">float : none</div>
+        <div class="left">float : left</div>
+        <div class="right">float : right</div>
+        <div class="clear">float : clear</div>
+
+    </div>
+</body>
+</html>

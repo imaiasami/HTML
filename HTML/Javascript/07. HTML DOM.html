@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>07.HTML DOM</title>
+    <!--
+        DOM (Document Object Model): 문서 객체 모델
+        프로그램과 스크립트 문서의 콘텐츠, 구조, 스타일 등에 동적으로 엑세스하여 
+        업데이트 할 수 있도록 하는 플랫폼언어 중립적인 인터페이스
+        HTML 엘리먼트 찾기
+        document.getElementById(id) : 아이디로 엘리먼트 찾기
+        document.getElementsByTagName(name) : 태그 이름으로 엘리먼트 찾기
+        document.getElementsByClassNmae(name) : 클래스의 이름으로 엘리먼트 찾기
+        HTML 엘리먼트 변경하기
+         - element.innerHTML = HTML 콘텐츠 : 엘리먼트의 HTML 내용을 변경
+         - element.attribute(속성의 이름) = 변경한 속성 값 : 엘리먼트의 속성 값이 변경
+         - element.style.property(CSS 속성의 이름) = 변경할 스타일 값: 엘리먼트의 스타일 변경
+        HTML 엘리먼트 생성하기
+        - document.createElement(element) : 엘리먼트 생성
+        - document.appendChild(element) : 엘리먼트 추가
+        - document.removeElement : 엘리먼트 삭제
+        - document.replace : 엘리먼트 교체
+    -->
+
+</head>
+<body>
+    <p id="demo">안녕</p>
+    <p id="demo">안녕</p>
+    <p id="demo">안녕</p>
+    <input type="text" name="name" id="name" value="hong">
+
+    <script>
+        // DOM Method
+        // - getElementById("아이디 속성 값") : 아이디 속성값에 해당하는 태그에 접근할 수 있다.
+        // - innerHTML : 요소의 내용을 가져오거나 변경하는데 사용
+        document.getElementById("demo").innerHTML = 'hello world';
+        document.getElementById("name").value = '홍길동';
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.getElementsByClassName('demo'));
+
+        //엘리먼트의 속성 변경하기
+        document.getElementById('name').value = 'hello';
+        console.log(document.getElementById('demo').abc);
+
+        //엘리먼트 스타일
+        document.getElementById('demo').style.color ='red';
+
+        // 엘리먼트 생성하기
+        document.createElement('button');
+        button.innerHTML = "전송하기";
+        document.body.appendChild(button);
+
+        // HTML 쓰기
+        document.write('Hello world');
+    </script>
+</body>
+</html>

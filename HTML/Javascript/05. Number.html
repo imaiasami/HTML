@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>빌트인 오브젝트 - Number</title>
+    <script>
+        /*
+            빌트인 값 타입 : undifined, null, number, string, ...
+            빌트인 연산자 : +, -, *, /, ...
+            빌트인 오브젝트 : Number, String, Object, Function, Array,
+            Global, JSON, Date, Math, ...
+
+            Number Object
+            - new Number() : 인스턴스의 생성. (퍼포먼스가 떨어진다.)
+            - Number() : 숫자 값으로 변환하여 반환한다.
+                1) 파라미터 값을 Number 타입으로 변환
+                2) 문자열도 숫자로 변환할 수 있으면 변환 가능
+                3) parameter 를 넣지 않으면 0 을 반환한다.
+
+            primitive 값
+            - primitive 값 : 가장 낮은 단계의 값 (더이상 전개할 수 없다.)
+            - primitive 타입 : number, string, boolean, null, undifined, object(primitive 값이 없음)
+            
+            - valueOf() : Number 인스턴스에 primitive 값을 리턴해준다.
+
+        */
+
+        console.log(new Number());          // 0
+        console.log(Number('10'));          // 10
+        console.log(Number(true));          // 1
+        console.log(Number(false));         // 0
+        console.log(Number('   20'));        // 20
+        console.log(Number('Hello'));       // NaN
+        console.log(Number('3.14'));        // 3.14
+        console.log(Number('3,14'));        // NaN
+        console.log(Number('3 14'));        // NaN
+        console.log(Number('20   '));        // 20
+        console.log(Number('2   0'));        // NaN
+
+        let x = 123;
+        console.log(x.valueOf());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> 빌트인 오브젝트 - Function </title>
+    <script>
+
+        function addNumber (a, b) {
+            return a + b;
+        }
+
+        let myFunction = function (a, b) {
+            return a + b;
+        }
+
+        // ES6 버전부터 지원하는 문법 (Arrow Function)
+        // 람다식 : 이름이 없는 식, 익명의 함수, 익명 함수(匿名函數, Anonymous functions)
+        myFunction = (a, b) => a * b;
+
+        console.log(myFunction);
+        console.log(typeof myFunction);
+        console.log(myFunction(2, 3));
+
+        /*
+            Argument Object
+            - 함수가 호출되어 함수 안으로 이동했을 때 argument라는
+            이름으로 생성되는 오브젝트
+            - 함수를 호출한 곳에서 넘겨준 값을 순서대로 저장
+            - 따로 선언해서 사용하는 것이 아니다.
+
+        */
+
+        let x = sumAll(1, 2, 3, 4, 5);
+        let y = sumAll(1, 2, 3);
+        console.log(x);
+        console.log(y);
+
+        function sumAll() {
+            let sum = 0;
+            console.log(typeof arguments);
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+
+            return sum;
+
+        }
+
+        // call() : 호출된 함수에서 참조할 오브젝트를 넘겨줄 수 있다.
+        let person = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        let hong = {
+            firstName: '길동',
+            lastName: '홍'
+        }
+
+        console.log(person.fullName.call(hong));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

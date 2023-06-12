@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>오브젝트</title>
+    <script>
+        /*
+            Object Properties
+            - {name : value} 의 형태
+            - name 의 따옴표는 생략 가능
+        */
+
+        let x = {
+            a : 123,
+            b : "ABC",
+            c : true,
+            d : {},
+            e : function(){}
+        }
+
+        let person = {
+            firstName: "길동",
+            lastName: "홍",
+            id: "hong",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        person.age = 30;                    // properties 추가 
+        person.lastName = '김';             // properties 수정 (변경)
+        person['firstName'] = '개똥';       // properties 수정 (변경)
+        person.id = "Kim";
+
+        let valName = 'telephone';
+        person[valName] = '010-1234-5678';
+
+        console.log(person);
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.id);
+        console.log(person.fullName());
+
+        // for ~ in
+        for (let item in person) {
+            console.log(item);
+            console.log(person[item]);
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+    아이디 <input type="text" name="" id="">
+    비밀번호 <input type="password" name="" id="">
+    
+</body>
+</html>

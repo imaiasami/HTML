@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>가로배치하기 (float, overflow)</title>
+    <style>
+        section {
+            border: 5px solid blue;
+            width: 600px;
+            /* height: 100px; */
+            /* overflow: hidden : float을 하면 부모가 길이값을 잃기때문에 길이값을 맞춰준다.
+            자식요소에 맞춰서 자동으로 높이값을 줌. */
+            overflow: hidden;
+        }
+
+        article {
+            background-color: gold;
+            width: 200px;
+            height: 100px;
+            float: left;
+            border: 1px solid red;
+            /* border를 주면 길이가 늘어나서 배치가 틀어진다. */
+            box-sizing: border-box;
+            /* border를 주더라도 전체 길이값을 width에 맞춰준다. */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article>ariticle</article>
+        <article>ariticle</article>
+        <article>ariticle</article>
+    </section>
+    
+</body>
+</html>

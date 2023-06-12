@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> 빌트인 오브젝트 - Number </title>
+    <script>
+
+        /*
+            length : 문자열의 길이 값을 반환
+            valueOf() : 프리미티브 값을 반환
+            toString() : 문자열로 변환
+            charAt(index) : index 번재 문자를 반환
+            indexOf(문자) : 일치하는 문자 중 가장 작은 인덱스를 반환
+            lastIndexOf(문자) : 일치하는 문자 중 가장 마지막 인덱스를 반환
+            concat() : 문자열 합침
+            toLowerCase() : 영문 소문자로 변환
+            toUpperCase() : 영문 대문자로 변환
+            trim() : 문자열 앞 뒤의 공백을 제거 (스페이스 제거)
+            slice() :  시작부터 끝 인덱스 바로 앞까지 값을 반환
+            substring() : slice() 와 비슷하지만, 음수는 0으로 인식
+            substr() : 시작부터 지정한 문자 수까지 반환
+            replace() : 매치된 결과를 지정한 값으로 대체
+            search() : 검색된 첫 번째 인덱스를 반환
+
+
+
+        */
+
+        console.log(new String());
+        
+
+        // valueOf() : String 인스턴스의 프리미티브 값을 리턴
+        let str = "Hello";
+        console.log(str.valueOf());
+
+        // length : 문자열의 길이값을 반환
+        console.log(str.length);
+
+        // slice() : 시작 인덱스부터 끝 인덱스 직전 까지 값을 반환해주는 함수
+        str = 'Hello World';
+        console.log(str.slice(6,str.length));   // 5번지 부터 ~ 끝까지.
+        // 끝나는 인덱스를 주지 않으면 마지막까지 자른다.
+        console.log(str.slice(6));              // 5번지까지.
+        console.log(str.slice(-11));
+        console.log(str.slice(-5));
+    
+
+        // substring() : slice() 함수와 비슷하다.
+        console.log(str.substring(0, 6));       // 5번지까지.
+        // substring() : substring() 은 음수를 인식할 수 없다. 0 보다 작은 수는 0 으로 인식한다.
+        console.log(str.substring(-5));
+
+        // substr() : slice() 하고 비슷한데 두 번째 파라미터는 길이값을 의미한다.
+        console.log(str.substr(6, 5));
+
+        // replace()
+        str = 'Hello World';
+        console.log(str.replace('World', 'JAVA'));
+
+        // search()
+        console.log(str.search('e'));
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

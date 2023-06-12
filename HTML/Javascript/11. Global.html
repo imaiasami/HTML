@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> 빌트인 프로젝트 - Global </title>
+    <script>
+        /*
+
+            모든 <script> 를 통틀어 오직 하나만 존재한다.
+            new 연산자로 인스턴스 생성이 안된다.
+            글로벌 오브젝트는 프로퍼티의 이름만 사용하면 된다.
+
+            프로퍼티 리스트
+            - NaN : Not a Number
+            - Infinity : 무한대 값
+            - undifined : undifined
+            - isNaN() : NaN 이면 true, 아니면 false
+            - isFinite() : 유한대이면 true, 아니면 false
+            - parseInt() : 정수로 변환
+            - parseFloat() : 실수로 변환
+            - encodeURI() : URI 인코딩
+
+        */
+
+        let num1 = 10;
+        console.log(typeof num1);
+        console.log(isNaN(num1));
+
+        let num2 = Number(num1 + 'A');
+        console.log(typeof num2);
+        console.log(isNaN(num2));
+
+        let num3 = '20A30';     // 앞에 붙으면 안됨, 뒤에 붙으면 됨.
+        console.log(typeof num3);
+        num3 = parseInt(num3);
+        console.log(typeof num3);
+        console.log(num3);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
